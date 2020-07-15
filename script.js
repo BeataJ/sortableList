@@ -50,6 +50,8 @@ function createList() {
 
 function dragStart() {
   // console.log('Event: ', 'dragstart');
+  dragStartIndex = +this.closest('li').getAttribute('data-index');
+  console.log(dragStartIndex);
 }
 
 function dragOver() {
