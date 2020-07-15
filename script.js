@@ -60,6 +60,9 @@ function dragOver() {
 function dragDrop() {
   // console.log('Event: ', 'dragdrop');
   const dragEndIndex = +this.getAttribute('data-index');
+  swapItems(dragStartIndex, dragEndIndex);
+
+  this.classList.remove('over');
 }
 
 function dragEnter() {
