@@ -53,8 +53,9 @@ function dragStart() {
   dragStartIndex = +this.closest('li').getAttribute('data-index');
 }
 
-function dragOver() {
+function dragOver(e) {
   // console.log('Event: ', 'dragover');
+  e.preventDefault();
 }
 
 function dragDrop() {
@@ -63,6 +64,10 @@ function dragDrop() {
   swapItems(dragStartIndex, dragEndIndex);
 
   this.classList.remove('over');
+}
+
+function swapItems(fromIndex, toIndex) {
+  console.log(123);
 }
 
 function dragEnter() {
