@@ -51,7 +51,6 @@ function createList() {
 function dragStart() {
   // console.log('Event: ', 'dragstart');
   dragStartIndex = +this.closest('li').getAttribute('data-index');
-  console.log(dragStartIndex);
 }
 
 function dragOver() {
@@ -60,6 +59,7 @@ function dragOver() {
 
 function dragDrop() {
   // console.log('Event: ', 'dragdrop');
+  const dragEndIndex = +this.getAttribute('data-index');
 }
 
 function dragEnter() {
